@@ -1,0 +1,20 @@
+.tooltip {
+    border: white solid 1px;
+    background-color: rgba(0, 0, 255, 0.363);
+    position: relative;
+    cursor: pointer;
+}
+.tooltip::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    max-width: 200px;
+    padding: 10px;
+    background-color: darkblue;
+    color: #fff;
+    pointer-events: none;
+    opacity: 1;
+    transition: tranform 0.2s ease-out, opacity 0.2s ease-out;
+}

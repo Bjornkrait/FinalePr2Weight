@@ -1,0 +1,62 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(1.5) translateX(-500px) rotate(-160deg);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.modal__wrapper {
+    padding: 30px;
+    background-color: #fff;
+    max-width: 600px;
+    width: 70%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.modal--open {
+    display: flex;
+    pointer-events: auto;
+    opacity: 1;
+    transform: scale(1) translateX(0) rotate(0deg);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.btn--open {
+    height: 100px;
+    width: 50%;
+    border: black solid 1px;
+    border-radius: 10%;
+}
+
+.btn--open:hover,
+.btn--open:focus    {
+        box-shadow: 0px 2px 10px 10px;
+        border-radius: 50%;
+        transition: border-radius 0.2s ease-in-out;
+}
+
+.btn--close {
+    border: black solid 2px;
+    border-radius: 25%;
+    transition: transform 0.3s;
+}
+.btn--close:hover,
+.btn--close:focus{
+    background-color: bisque;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
