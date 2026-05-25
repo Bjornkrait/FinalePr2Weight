@@ -1,0 +1,25 @@
+body {
+    margin: 0 auto;
+}
+
+.navigator {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+    padding-top: 10px;
+}
+
+.navigator a {
+    padding: 10px 10px;
+    border: solid 1px black;
+    border-radius: 10px;
+    width: 100px;
+}
+.navigator a:hover,
+.navigator a:focus {
+    color: #ffffff;
+    background-color: black;
+}
