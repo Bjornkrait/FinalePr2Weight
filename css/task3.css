@@ -1,0 +1,151 @@
+.burger {
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 110;
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.burger_line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    background-color: #000;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+
+}
+
+.burger_line:nth-child(1) {
+    top: 0;
+}
+
+.burger_line:nth-child(2) {
+    top: 20px;
+}
+
+.burger_line:nth-child(3) {
+    top: 20px;
+}
+
+.burger_line:nth-child(4) {
+    top: 40px;
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    padding-top: 100px;
+    background-color: darkblue;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.main-nav_list {
+    list-style: none;
+}
+.menu--open .main-nav {
+    transform: translateY(0%);
+    transition: transform 0.2s ease;
+}
+
+.menu--open .main-nav_item {
+    opacity: 1;
+}
+
+.menu--open .main-nav_item:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.menu--open .main-nav_item:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.menu--open .main-nav_item:nth-child(3) {
+    transition-delay: 0.6s;
+}
+
+.menu--open .burger_line {
+    background-color: red;
+}
+
+.menu--open .menu__logo-link {
+    color: red;
+    transition: color 0.2s ease-in-out;
+}
+
+
+.main-nav__list {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.main-nav_item {
+    opacity: 0;
+    transition: opacity 0.2s ease 0s;
+}
+
+.main-nav__link {
+    font-size: 300%;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus {
+    color: red;
+}
+
+.menu__logo-link {
+    z-index: 140;
+    transition: color 0.2s ease-in-out;
+}
+
+.menu__logo-link svg {
+    width: 70px;
+    height: 70px;
+}
+
+.menu_burger {
+    z-index: 140;
+}
+
+.menu--open .burger_line:nth-child(1){
+    transform: scaleX(0);
+}
+.menu--open .burger_line:nth-child(2){
+    transform: rotate(45deg);
+}
+.menu--open .burger_line:nth-child(3){
+    transform: rotate(-45deg);
+}
+.menu--open .burger_line:nth-child(4){
+    transform: scaleX(0);
+}

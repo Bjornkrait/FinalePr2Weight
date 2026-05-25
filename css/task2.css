@@ -15,6 +15,11 @@
     background-color: darkblue;
     color: #fff;
     pointer-events: none;
+    opacity: 0;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.tooltip-animated::after {
+    transform: translateY(100%);
     opacity: 1;
-    transition: tranform 0.2s ease-out, opacity 0.2s ease-out;
 }
